@@ -32,7 +32,7 @@ const PostsPage = () => {
 
 
   return (
-    <div>
+    <div className="pagination">
       <h3>Posts:</h3>
       <ul>
         {posts.map((post) => (
@@ -41,7 +41,7 @@ const PostsPage = () => {
           </li>
         ))}
       </ul>
-      <div className="pagination">
+      <div className="pagination_btn">
         <button onClick={() => setPage(page > 1 ? page - 1 : 1)}>◀</button>
         <span>Page {page}</span>
         <button onClick={() => setPage(page < 15 ? Number(page) + 1 : 15)}>▶</button>
